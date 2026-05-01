@@ -5,23 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaradhya Family Dhaba</title>
 
-    <link 
-      rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+
     <div class="main">
 
+        <!-- Navbar -->
         <div class="navbar">
             <div class="nav-1">
                 <div class="logo">Aaradhya Family Dhaba</div>
 
                 <ul class="links">
                     <li>Home</li>
-                    <li>Menu</li>
+                    <li onclick="goMenu()">Menu</li>
                     <li>About</li>
                     <li>Location</li>
                     <li>Contact</li>
@@ -34,42 +32,90 @@
             </div>
         </div>
 
+        <!-- Hero -->
         <div class="hero">
             <div class="left">
                 <span class="left1">Are You Hungry?</span>
                 <span class="left2">Don't Wait</span>
                 <span class="left3">Let's Start to order food now</span>
-                <span class="left4">Check out Menu</span>
+                <span class="left4" onclick="goMenu()">Check out Menu</span>
             </div>
 
-            <div class="food" id="food"></div>
+            <div class="food2" id="food"></div>
         </div>
 
+        <!-- Small Food Items -->
         <div class="items">
             <div id="food1"></div>
             <div id="food2"></div>
             <div id="food3"></div>
             <div id="food4"></div>
         </div>
-
     </div>
 
-    <script>
-        let food = document.getElementById("food")
+    <!-- Popular Dishes -->
+    <div class="menu-cards">
 
-        document.getElementById("food1").onclick = () => {
-            food.style.backgroundImage = "url('./food1.png')"
-        }
-        document.getElementById("food2").onclick = () => {
-            food.style.backgroundImage = "url('./food2.png')"
-        }
-        document.getElementById("food3").onclick = () => {
-            food.style.backgroundImage = "url('./food3.png')"
-        }
-        document.getElementById("food4").onclick = () => {
-            food.style.backgroundImage = "url('./food4.png')"
-        }
-    </script>
+    <div class="card">
+        <img src="./food8.png">
+        <h3>Roti Naan</h3>
+        <p>₹15</p>
+        <button onclick="addCart('Roti Naan',15)">Add to Cart</button>
+    </div>
 
+    <div class="card">
+        <img src="./food6.png">
+        <h3>Butter Naan</h3>
+        <p>₹30</p>
+        <button onclick="addCart('Butter Naan',30)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="./food9.png">
+        <h3>Chicken Curry (1 Kg)</h3>
+        <p>₹250</p>
+        <button onclick="addCart('Chicken Curry',250)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="./food1.png">
+        <h3>Paneer Curry</h3>
+        <p>₹200</p>
+        <button onclick="addCart('Paneer Curry',200)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="./food7.png">
+        <h3>Sweet Corn</h3>
+        <p>₹150</p>
+        <button onclick="addCart('Sweet Corn',150)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="./food2.png">
+        <h3>Chicken Biryani</h3>
+        <p>₹150</p>
+        <button onclick="addCart('Chicken Biryani',150)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="./food4.png">
+        <h3>Egg Masala</h3>
+        <p>₹80</p>
+        <button onclick="addCart('Egg Masala',80)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="./food5.png">
+        <h3>Egg Burji</h3>
+        <p>₹60</p>
+        <button onclick="addCart('Egg Burji',60)">Add to Cart</button>
+    </div>
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
