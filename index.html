@@ -27,6 +27,12 @@
 
                 <div class="icons">
                     <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <div class="cart-icon" onclick="openCart()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cartCount">0</span>
+                    </div>
+
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
@@ -35,9 +41,9 @@
         <!-- Hero -->
         <div class="hero">
             <div class="left">
-                <span class="left1">Are You Hungry?</span>
-                <span class="left2">Don't Wait</span>
-                <span class="left3">Let's Start to order food now</span>
+                <span class="left1">Feeling Hungry?</span>
+                <span class="left2">Hurry Up!</span>
+                <span class="left3">Let’s Order Food Now</span>
                 <span class="left4" onclick="goMenu()">Check out Menu</span>
             </div>
 
@@ -54,66 +60,75 @@
     </div>
 
     <!-- Popular Dishes -->
-    <div class="menu-cards">
+<div class="menu-section">
+    <h1>Popular Dishes</h1>
 
-    <div class="card">
-        <img src="./food8.png">
-        <h3>Roti Naan</h3>
-        <p>₹15</p>
-        <button onclick="addCart('Roti Naan',15)">Add to Cart</button>
-    </div>
+    <div class="menu-cards" id="menu">
 
-    <div class="card">
-        <img src="./food6.png">
-        <h3>Butter Naan</h3>
-        <p>₹30</p>
-        <button onclick="addCart('Butter Naan',30)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="./food9.png">
-        <h3>Chicken Curry (1 Kg)</h3>
-        <p>₹250</p>
-        <button onclick="addCart('Chicken Curry',250)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="./food1.png">
-        <h3>Paneer Curry</h3>
-        <p>₹200</p>
-        <button onclick="addCart('Paneer Curry',200)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="./food7.png">
-        <h3>Sweet Corn</h3>
-        <p>₹150</p>
-        <button onclick="addCart('Sweet Corn',150)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="./food2.png">
-        <h3>Chicken Biryani</h3>
-        <p>₹150</p>
-        <button onclick="addCart('Chicken Biryani',150)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="./food4.png">
-        <h3>Egg Masala</h3>
-        <p>₹80</p>
-        <button onclick="addCart('Egg Masala',80)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="./food5.png">
-        <h3>Egg Burji</h3>
-        <p>₹60</p>
-        <button onclick="addCart('Egg Burji',60)">Add to Cart</button>
-    </div>
-
-
+        <div class="card">
+            <img src="./food8.png">
+            <h3>Roti Naan</h3>
+            <p>₹15</p>
+            <button onclick="addCart('Roti Naan',15)">Add to Cart</button>
         </div>
+
+        <div class="card">
+            <img src="./food6.png">
+            <h3>Butter Naan</h3>
+            <p>₹30</p>
+            <button onclick="addCart('Butter Naan',30)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="./food9.png">
+            <h3>Chicken Curry (1 Kg)</h3>
+            <p>₹250</p>
+            <button onclick="addCart('Chicken Curry',250)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="./food1.png">
+            <h3>Paneer Curry</h3>
+            <p>₹200</p>
+            <button onclick="addCart('Paneer Curry',200)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="./food7.png">
+            <h3>Sweet Corn</h3>
+            <p>₹150</p>
+            <button onclick="addCart('Sweet Corn',150)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="./food2.png">
+            <h3>Chicken Biryani</h3>
+            <p>₹150</p>
+            <button onclick="addCart('Chicken Biryani',150)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="./food4.png">
+            <h3>Egg Masala</h3>
+            <p>₹80</p>
+            <button onclick="addCart('Egg Masala',80)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="./food5.png">
+            <h3>Egg Burji</h3>
+            <p>₹60</p>
+            <button onclick="addCart('Egg Burji',60)">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+    <!-- Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <h3 id="totalPrice">Total: ₹0</h3>
+        <button onclick="closeCart()">Close</button>
     </div>
 
     <script src="script.js"></script>
